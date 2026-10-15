@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Registrasi Webinar Belajar Mandarin bersama UCAP MANDARIN." />
+  <title>Registrasi Webinar - UCAP MANDARIN</title>
+  <link rel="icon" href="Logo.png" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="#daftar" aria-label="UCAP MANDARIN">
+        <img src="Logo.png" alt="Logo UCAP MANDARIN" />
+      </a>
+      <nav class="header-nav">
+        <a class="header-link" href="cek-sertifikat.html">Cek Sertifikat</a>
+        <a class="header-cta" href="#daftar">Daftar Sekarang</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ================= HERO =================
+       Ganti teks di bawah ini sesuai detail webinar Anda -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <span class="eyebrow">Webinar Gratis - Batch 2</span>
+      <h1>Ngobrol Percaya Diri dalam Bahasa Mandarin</h1>
+      <p class="lead">
+        Ikuti webinar seru bareng UCAP MANDARIN dan temukan cara belajar Mandarin yang
+        mudah, menyenangkan, dan praktis untuk pemula. Kuota terbatas!
+      </p>
+      <div class="hero-meta" id="heroMeta">
+        <div class="meta-chip"><span class="ico">&#128197;</span> Kamis, 31 Desember 2026</div>
+        <div class="meta-chip"><span class="ico">&#128336;</span> 19.00 - 21.00 WIB</div>
+        <div class="meta-chip"><span class="ico">&#128187;</span> Online via Zoom</div>
+        <div class="meta-chip"><span class="ico">&#127873;</span> GRATIS</div>
+      </div>
+
+      <div class="countdown" id="countdown" hidden>
+        <p class="countdown-title">Webinar dimulai dalam</p>
+        <div class="countdown-boxes">
+          <div class="cd-box"><span class="cd-num" id="cd-days">00</span><span class="cd-label">Hari</span></div>
+          <div class="cd-box"><span class="cd-num" id="cd-hours">00</span><span class="cd-label">Jam</span></div>
+          <div class="cd-box"><span class="cd-num" id="cd-mins">00</span><span class="cd-label">Menit</span></div>
+          <div class="cd-box"><span class="cd-num" id="cd-secs">00</span><span class="cd-label">Detik</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FORM ================= -->
+  <section class="form-section" id="daftar">
+    <div class="container">
+      <div class="form-card">
+        <h2>Formulir Pendaftaran</h2>
+        <p class="subtitle">Isi data di bawah ini dengan benar. Link webinar akan dikirim ke WhatsApp kamu.</p>
+
+        <form id="regForm" novalidate>
+          <div class="grid">
+
+            <div class="field full">
+              <label for="nama">Nama <span class="req">*</span></label>
+              <input type="text" id="nama" name="nama" placeholder="Nama lengkap kamu" autocomplete="name" required />
+              <p class="error-text" data-for="nama">Mohon isi nama kamu.</p>
+            </div>
+
+            <div class="field">
+              <label for="hp">No.Hp (Whatsapp) <span class="req">*</span></label>
+              <input type="tel" id="hp" name="hp" placeholder="08xxxxxxxxxx" inputmode="numeric" autocomplete="tel" required />
+              <p class="hint">Gunakan nomor WhatsApp yang aktif.</p>
+              <p class="error-text" data-for="hp">Masukkan nomor WhatsApp yang valid (min. 9 digit angka).</p>
+            </div>
+
+            <div class="field">
+              <label for="umur">Umur <span class="req">*</span></label>
+              <input type="number" id="umur" name="umur" placeholder="contoh: 20" min="5" max="100" required />
+              <p class="error-text" data-for="umur">Masukkan umur yang valid.</p>
+            </div>
+
+            <div class="field">
+              <label for="email">Email <span class="req">*</span></label>
+              <input type="email" id="email" name="email" placeholder="nama@email.com" autocomplete="email" required />
+              <p class="hint">Dipakai untuk cek sertifikat setelah webinar.</p>
+              <p class="error-text" data-for="email">Masukkan email yang valid.</p>
+            </div>
+
+            <div class="field">
+              <label for="domisili">Asal Domisili <span class="req">*</span></label>
+              <input type="text" id="domisili" name="domisili" placeholder="contoh: Jakarta / Bandung" required />
+              <p class="hint">Cukup isikan nama daerah/kota.</p>
+              <p class="error-text" data-for="domisili">Mohon isi asal domisili kamu.</p>
+            </div>
+
+            <div class="field full">
+              <label for="pekerjaan">Pekerjaan <span class="req">*</span></label>
+              <select id="pekerjaan" name="pekerjaan" required>
+                <option value="" disabled selected>Pilih pekerjaan</option>
+                <option>Pelajar / Mahasiswa</option>
+                <option>Karyawan / Swasta</option>
+                <option>Wirausaha</option>
+                <option>Guru / Dosen</option>
+                <option>Ibu Rumah Tangga</option>
+                <option>Freelancer</option>
+                <option>Lainnya</option>
+              </select>
+              <p class="error-text" data-for="pekerjaan">Mohon pilih pekerjaan kamu.</p>
+            </div>
+
+            <div class="field full">
+              <label for="motivasi">Motivasi belajar Mandarin <span class="req">*</span></label>
+              <textarea id="motivasi" name="motivasi" placeholder="Ceritakan alasan kamu ingin belajar bahasa Mandarin..." required></textarea>
+              <p class="error-text" data-for="motivasi">Mohon tuliskan motivasi kamu.</p>
+            </div>
+
+            <div class="field full">
+              <label>Apakah pernah mengikuti kursus bahasa Mandarin? <span class="req">*</span></label>
+              <div class="radio-group" data-group="kursus">
+                <label class="radio-opt">
+                  <input type="radio" name="kursus" value="Ya" required />
+                  <span>Ya</span>
+                </label>
+                <label class="radio-opt">
+                  <input type="radio" name="kursus" value="Tidak" />
+                  <span>Tidak</span>
+                </label>
+                <label class="radio-opt">
+                  <input type="radio" name="kursus" value="Sedang berjalan" />
+                  <span>Sedang berjalan</span>
+                </label>
+              </div>
+              <p class="error-text" data-for="kursus">Mohon pilih salah satu.</p>
+            </div>
+
+            <div class="field full">
+              <label for="sumber">Dari mana kamu menemukan informasi webinar? <span class="req">*</span></label>
+              <select id="sumber" name="sumber" required>
+                <option value="" disabled selected>Pilih salah satu</option>
+                <option>Instagram</option>
+                <option>TikTok</option>
+                <option>Facebook</option>
+                <option>WhatsApp / Broadcast</option>
+                <option>Teman / Keluarga</option>
+                <option>Google / Mesin Pencari</option>
+                <option>Website UCAP MANDARIN</option>
+                <option>Lainnya</option>
+              </select>
+              <p class="error-text" data-for="sumber">Mohon pilih salah satu.</p>
+            </div>
+
+            <!-- Honeypot (jangan diisi) -->
+            <div class="hp" aria-hidden="true">
+              <label for="website">Website</label>
+              <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
+            </div>
+
+          </div>
+
+          <div class="submit-row">
+            <button type="submit" class="btn" id="submitBtn">
+              <span class="spinner"></span>
+              <span class="btn-label">Daftar Sekarang</span>
+            </button>
+          </div>
+
+          <div class="notice" id="notice" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= BENEFITS ================= -->
+  <section class="benefits">
+    <div class="container">
+      <h3>Kenapa harus ikut webinar ini?</h3>
+      <div class="benefit-grid">
+        <div class="benefit">
+          <div class="ico">&#127908;</div>
+          <h4>Praktik Langsung</h4>
+          <p>Belajar pelafalan (pinyin) dan nada dengan bimbingan langsung dari pengajar.</p>
+        </div>
+        <div class="benefit">
+          <div class="ico">&#128218;</div>
+          <h4>Materi Pemula</h4>
+          <p>Cocok untuk yang baru mulai, tanpa perlu latar belakang bahasa Mandarin.</p>
+        </div>
+        <div class="benefit">
+          <div class="ico">&#127873;</div>
+          <h4>Bonus Peserta</h4>
+          <p>Dapatkan e-book dan promo spesial khusus untuk peserta webinar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <img src="Logo.png" alt="UCAP MANDARIN" />
+      <p>&copy; <span id="year"></span> UCAP MANDARIN. Belajar Mandarin jadi lebih mudah.</p>
+      <p style="margin-top:8px;"><a href="cek-sertifikat.html">Cek Sertifikat</a></p>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

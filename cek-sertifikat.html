@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex" />
+  <title>Cek Sertifikat - UCAP MANDARIN</title>
+  <link rel="icon" href="Logo.png" />
+  <link rel="stylesheet" href="css/cek-sertifikat.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html" aria-label="UCAP MANDARIN">
+        <img src="Logo.png" alt="Logo UCAP MANDARIN" />
+      </a>
+      <nav class="header-nav">
+        <a class="header-link" href="index.html">Beranda</a>
+        <a class="header-cta" href="index.html#daftar">Daftar Webinar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="card">
+        <span class="eyebrow">Sertifikat Peserta</span>
+        <h1>Cek Link Sertifikat</h1>
+        <p class="lead">
+          Masukkan <strong>email</strong> yang kamu gunakan saat mendaftar webinar
+          untuk menemukan link sertifikatmu.
+        </p>
+
+        <form id="certForm" novalidate>
+          <div class="field">
+            <label for="email">Email <span class="req">*</span></label>
+            <input type="email" id="email" name="email" placeholder="nama@email.com" autocomplete="email" required />
+            <p class="error-text" data-for="email">Masukkan email yang valid.</p>
+          </div>
+
+          <button type="submit" class="btn" id="checkBtn">
+            <span class="spinner"></span>
+            <span class="btn-label">Cek Sertifikat</span>
+          </button>
+        </form>
+
+        <div class="notice" id="notice" role="status" aria-live="polite"></div>
+
+        <div class="result" id="result">
+          <div class="result-icon">&#127942;</div>
+          <h2 class="result-title" id="resultTitle"></h2>
+          <p class="result-text" id="resultText"></p>
+          <a class="btn btn-download" id="downloadBtn" href="#" target="_blank" rel="noopener">
+            <span>&#128196;</span> Buka / Download Sertifikat
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <img src="Logo.png" alt="UCAP MANDARIN" />
+      <p>&copy; <span id="year"></span> UCAP MANDARIN. Belajar Mandarin jadi lebih mudah.</p>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/cek-sertifikat.js"></script>
+</body>
+</html>
