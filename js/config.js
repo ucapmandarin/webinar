@@ -20,6 +20,15 @@ window.APP_CONFIG = {
     { icon: "📅", text: "Sabtu, 24 Oktober 2026" },
     { icon: "🕐", text: "13:00 - 14:30 WIB" },
     { icon: "💻", text: "Online via Zoom" }
-  ]
+  ],
+
+  // Tombol bantuan WhatsApp (floating, pojok kanan bawah semua halaman).
+  // Isi nomor: boleh "08xxxxxxxxxx" atau "628xxxxxxxxxx".
+  // Selama masih placeholder di bawah, tombol tidak akan muncul.
+  WA_HELP_NUMBER: "6282123452163",
+  WA_HELP_MESSAGE: "Halo UCAP MANDARIN, saya butuh bantuan pendaftaran webinar.",
+
+  // Proteksi anti inspect (best-effort). false = matikan.
+  NO_INSPECT: true
 
 };

@@ -15,12 +15,15 @@ Siap di-upload ke **GitHub Pages**.
 ├── css/
 │   ├── style.css               # Styling halaman registrasi
 │   ├── thank-you.css           # Styling halaman konfirmasi
-│   └── cek-sertifikat.css      # Styling halaman cek sertifikat
+│   ├── cek-sertifikat.css      # Styling halaman cek sertifikat
+│   └── floating-wa.css         # Styling tombol bantuan WhatsApp
 ├── js/
 │   ├── config.js               # KONFIGURASI (SCRIPT_URL & WA_GROUP_URL)
 │   ├── main.js                 # Logika form + kirim data ke Google Sheet
 │   ├── thank-you.js            # Logika halaman konfirmasi + tombol WhatsApp
-│   └── cek-sertifikat.js       # Logika pencarian sertifikat
+│   ├── cek-sertifikat.js       # Logika pencarian sertifikat
+│   ├── floating-wa.js          # Tombol bantuan WhatsApp melayang
+│   └── no-inspect.js           # Anti inspect (blokir klik kanan & shortcut)
 ├── google-apps-script/
 │   └── Code.gs                 # Backend Apps Script (simpan data & cek sertifikat)
 └── README.md
@@ -166,6 +169,35 @@ WA_GROUP_URL: "https://chat.whatsapp.com/XXXXXXXXXXXXXXXXXXXX",
 ```
 
 Selama belum diisi, tombol tetap tampil dan menampilkan pesan "hubungi admin".
+
+## Tombol bantuan WhatsApp (floating)
+
+Di pojok kanan bawah semua halaman ada tombol WhatsApp mengambang untuk membantu
+peserta yang kesulitan. Atur di `js/config.js`:
+
+```js
+WA_HELP_NUMBER: "628xxxxxxxxxx",
+WA_HELP_MESSAGE: "Halo UCAP MANDARIN, saya butuh bantuan pendaftaran webinar."
+```
+
+- `WA_HELP_NUMBER` boleh nomor lokal (`08...`) atau format `628...`. Bisa juga diisi
+  URL WhatsApp lengkap (mis. link `wa.me` tertentu).
+- `WA_HELP_MESSAGE` otomatis terisi di kolom chat saat tombol diklik.
+- Selama masih placeholder (`628xxxxxxxxxx`), tombol **tidak ditampilkan**.
+
+## Proteksi anti inspect (best-effort)
+
+Memblokir **klik kanan** (kecuali di dalam kolom form agar paste tetap bisa) dan
+**shortcut** `F12`, `Ctrl`/`Cmd`+`Shift`+`I`/`J`/`C`/`K`/`E`, `Ctrl`/`Cmd`+`U`, `Ctrl`/`Cmd`+`S`.
+Diatur di `js/config.js`:
+
+```js
+NO_INSPECT: true,   // false untuk mematikan
+```
+
+> **Penting:** pada web statis, Inspect Element **tidak bisa diblokir 100%**.
+> Pengguna tetap bisa membuka DevTools dari menu browser, menonaktifkan JavaScript,
+> atau memakai browser lain. Fitur ini hanya penghalang untuk pengguna awam.
 
 ## Cara kerja Cek Sertifikat
 
