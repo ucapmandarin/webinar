@@ -5,7 +5,7 @@ window.APP_CONFIG = {
 
   // URL Web App Apps Script (lihat README.md langkah 3)
   // Contoh: "https://script.google.com/macros/s/AKfycb.../exec"
-  SCRIPT_URL: "https://script.google.com/macros/s/AKfycbzT8AvTJzt5yLbmMX7TTsQQh_RV43P6nWMy6OVpSX7RWheloPS1A5Ko4TDW-vWKEgz6/exec",
+  SCRIPT_URL: "https://script.google.com/macros/s/AKfycbzbju2QZ8tWe_zIVpa6pkkWdnBWsWXDIYhlkL4-le_APUDp_DlXl4kWfSPsQ6jmjQKP/exec",
 
   // Link grup WhatsApp untuk tombol di halaman terima kasih
   // Contoh: "https://chat.whatsapp.com/XXXXXXXXXXXXXXXXXXXX"

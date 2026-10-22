@@ -204,13 +204,15 @@ NO_INSPECT: true,   // false untuk mematikan
 1. Peserta membuka `cek-sertifikat.html` dan mengisi **Email**
    (harus sama dengan data saat mendaftar).
 2. Halaman mengirim permintaan ke Web App: `?action=cert&email=...`.
-3. Apps Script (`doGet`) mencari baris yang cocok di kolom **Email**,
-   lalu mengembalikan isi kolom **Link Sertifikat**.
-4. Jika link tersedia, peserta melihat tombol **Buka / Download Sertifikat**.
-   Jika belum diisi admin, muncul pesan "Sertifikat Belum Tersedia".
+3. Apps Script (`doGet`) mencari baris yang cocok di kolom **Email**.
+4. Jika link sertifikat tersedia, peserta **wajib mengisi rating & review webinar**
+   terlebih dahulu. Review disimpan di sheet **Review Webinar**.
+5. Setelah review terkirim, tombol **Buka / Download Sertifikat** langsung muncul.
+   Jika link belum diisi admin, muncul pesan "Sertifikat Belum Tersedia".
 
 **Untuk admin:** setelah webinar selesai, tempel link sertifikat (mis. Google Drive)
-pada kolom **Link Sertifikat** di baris peserta yang bersangkutan.
+pada kolom **Link Sertifikat** di baris peserta yang bersangkutan. Setelah mengubah
+`Code.gs`, deploy ulang lewat **Deploy > Manage deployments > Edit > New version**.
 
 ## Mengganti tema warna
 

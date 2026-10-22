@@ -287,6 +287,104 @@ input.invalid { border-color: var(--red); background: #FFF8F8; }
 
 .result-text strong { color: var(--navy); }
 
+/* ---------- Review webinar ---------- */
+.review-form {
+  display: none;
+  margin: 0 0 20px;
+  padding: 18px 0 0;
+  border-top: 1px dashed #BFE7CC;
+  text-align: left;
+}
+
+.review-form.show { display: block; }
+
+.review-form h3 {
+  margin: 0 0 6px;
+  font-size: 1.02rem;
+  color: var(--navy);
+  text-align: center;
+}
+
+.review-sub {
+  margin: 0 0 14px;
+  color: var(--muted);
+  font-size: 0.86rem;
+  text-align: center;
+}
+
+.rating {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 0 0 6px;
+}
+
+.star {
+  font: inherit;
+  font-size: 2rem;
+  line-height: 1;
+  color: #D1D5DB;
+  background: none;
+  border: none;
+  padding: 0 2px;
+  cursor: pointer;
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+
+.star:hover,
+.star.active { color: #F59E0B; transform: scale(1.08); }
+
+.review-form textarea {
+  width: 100%;
+  font: inherit;
+  font-size: 0.94rem;
+  color: var(--text);
+  background: #FCFCFD;
+  border: 1.5px solid var(--border);
+  border-radius: 11px;
+  padding: 12px 14px;
+  resize: vertical;
+  min-height: 96px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.review-form textarea:focus {
+  outline: none;
+  border-color: var(--maroon);
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(140, 29, 47, 0.10);
+}
+
+.review-form textarea::placeholder { color: #9CA3AF; }
+.review-form textarea.invalid { border-color: var(--red); background: #FFF8F8; }
+
+.review-form .error-text { text-align: left; margin: 0 0 12px; }
+
+.btn-review {
+  margin-top: 4px;
+  background: linear-gradient(135deg, var(--navy), var(--maroon));
+}
+
+.review-status {
+  margin: 12px 0 0;
+  color: var(--red);
+  font-size: 0.84rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .btn-download {
   background: linear-gradient(135deg, var(--green), #22A855);
   display: none;

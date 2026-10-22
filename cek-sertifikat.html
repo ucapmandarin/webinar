@@ -52,6 +52,34 @@
           <div class="result-icon">&#127942;</div>
           <h2 class="result-title" id="resultTitle"></h2>
           <p class="result-text" id="resultText"></p>
+
+          <form class="review-form" id="reviewForm" novalidate>
+            <h3>Beri Review Webinar</h3>
+            <p class="review-sub">
+              Bagikan pengalamanmu mengikuti webinar dulu, lalu tombol download
+              sertifikat akan langsung muncul.
+            </p>
+
+            <div class="rating" id="rating" role="radiogroup" aria-label="Rating webinar">
+              <button type="button" class="star" data-value="1" role="radio" aria-checked="false" aria-label="1 bintang">&#9733;</button>
+              <button type="button" class="star" data-value="2" role="radio" aria-checked="false" aria-label="2 bintang">&#9733;</button>
+              <button type="button" class="star" data-value="3" role="radio" aria-checked="false" aria-label="3 bintang">&#9733;</button>
+              <button type="button" class="star" data-value="4" role="radio" aria-checked="false" aria-label="4 bintang">&#9733;</button>
+              <button type="button" class="star" data-value="5" role="radio" aria-checked="false" aria-label="5 bintang">&#9733;</button>
+            </div>
+            <p class="error-text" data-for="rating">Pilih rating webinar terlebih dahulu.</p>
+
+            <label class="sr-only" for="reviewText">Review webinar</label>
+            <textarea id="reviewText" name="review" rows="4" maxlength="600" placeholder="Tulis kesan, saran, atau pengalamanmu mengikuti webinar..." required></textarea>
+            <p class="error-text" data-for="review">Tulis review kamu terlebih dahulu.</p>
+
+            <button type="submit" class="btn btn-review" id="reviewBtn">
+              <span class="spinner"></span>
+              <span class="btn-label">Kirim Review &amp; Buka Download</span>
+            </button>
+            <p class="review-status" id="reviewStatus" role="status" aria-live="polite"></p>
+          </form>
+
           <a class="btn btn-download" id="downloadBtn" href="#" target="_blank" rel="noopener">
             <span>&#128196;</span> Buka / Download Sertifikat
           </a>
