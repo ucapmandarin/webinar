@@ -13,12 +13,12 @@ window.APP_CONFIG = {
 
   // Waktu mulai webinar (untuk COUNTDOWN). Format: DD/MM/YYYY HH:mm (waktu WIB).
   // Contoh: "31/12/2026 19:00"
-  WEBINAR_DATE: "24/10/2026 13:00",
+  WEBINAR_DATE: "14/11/2026 19:30",
 
   // Info yang tampil di halaman registrasi (icon + teks). Bisa diubah bebas.
   WEBINAR_INFO: [
-    { icon: "📅", text: "Sabtu, 24 Oktober 2026" },
-    { icon: "🕐", text: "13:00 - 14:30 WIB" },
+    { icon: "📅", text: "Sabtu, 14 November 2026" },
+    { icon: "🕐", text: "19:30 - Selesai WIB" },
     { icon: "💻", text: "Online via Zoom" }
   ],
 
